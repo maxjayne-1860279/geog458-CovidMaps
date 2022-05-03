@@ -6,23 +6,22 @@
     <title>US Covid Cases</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"/>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
 </head>
 
 <body>
 
     <div id="map"></div>
-    <div class="map-overlay" id="features">
-        <div id="title">
-            United States Covid Cases
-        </div>
-        <div id="subtitle">
-            Cases reported in 2020
+    <div class='map-overlay' id='features'>
+        <h2>US Covid Cases by County</h2>
+        <div id='text-description'>
+            <p>By: Max Jayne<br> This map showcases covid cases by county during the year 2020</p>
+            <p>Hover over any county!</p>
         </div>
     </div>
-    <div class="map-overlay" id="legend"></div>
+    <div class='map-overlay' id='legend'></div>
     <script src="js/map2.main.js"></script>
 
 </body>

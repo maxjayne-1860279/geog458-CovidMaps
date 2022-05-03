@@ -1,10 +1,11 @@
 mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5icTFxZ3ZkdncifQ.P9MBej1xacybKcDN_jehvw';
 
-const map = new mapboxgl.Map({
+let map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/dark-v10',
     zoom: 4, // starting zoom
-    center: [-100, 40] // starting center
+    center: [-100, 40], // starting center
+    projection: 'albers'
 });
 
 const grades = [10, 50, 200, 500, 1000],

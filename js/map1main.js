@@ -15,7 +15,7 @@ const grades = [
     160,
     200
 ];
-const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,1,38)'];
+const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,0,38)'];
 
 map.on('load', function loadingData() {
     map.addSource('rates', {

@@ -54,7 +54,7 @@ map.getCanvas().style.cursor = 'default';
 map.on('click', 'cases-layer', (event) => {
     new mapboxgl.Popup()
         .setLngLat(event.features[1].geometry.coordinates)
-        .setHTML(`<strong>Rates:</strong> ${event.features[1].properties.cases}`)
+        .setHTML(`<strong>Cases:</strong> ${event.features[1].properties.cases}`)
         .addTo(map);
 });
 

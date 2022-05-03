@@ -21,7 +21,7 @@ const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,
 map.on('load', function loadingData() {
     map.addSource('rates', {
         type: 'geojson',
-        data: 'assets/us-covid-2020-rates.geojson'
+        data: 'assets/us-covid-2020-rates.json'
     });
     
     map.addLayer({

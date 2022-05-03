@@ -51,7 +51,7 @@ grades.forEach((grade, i) => {
     key.style.backgroundColor = color;
 
     const value = document.createElement('span');
-    value.innerHTML = `${grade} - ${grades[i+1] || 1000}`;
+    value.innerHTML = `${grade} - ${grades[i+1] || '1000+'}`;
     item.appendChild(key);
     item.appendChild(value);
     legend.appendChild(item);

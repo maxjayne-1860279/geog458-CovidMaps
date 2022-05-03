@@ -48,6 +48,7 @@ map.addLayer({
     'waterway-label'
 );
 
+map.getCanvas().style.cursor = 'default';
 
 // click on tree to view magnitude in a popup
 map.on('click', 'cases-layer', (event) => {
@@ -79,6 +80,6 @@ labels.push(
 
 }
 const source =
-'<p style="text-align: right; font-size:10pt">Source: <a href="https://earthquake.usgs.gov/earthquakes/">USGS</a></p>';
+'<p style="text-align: right; font-size:10pt">Source: <a href="https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv">NY-Times</a></p>';
 
 legend.innerHTML = labels.join('') + source;

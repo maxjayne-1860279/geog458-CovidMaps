@@ -15,12 +15,12 @@ const layers = [
     160,
     200
 ];
-const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,0,38)'];
+const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,1,38)'];
 
 map.on('load', function loadingData() {
     map.addSource('rates', {
         type: 'geojson',
-        data: 'assets/us-covid-2020-rates.json'
+        data: 'assets/us-covid-2020-rates.geojson'
     });
     
     map.addLayer({
@@ -34,6 +34,8 @@ map.on('load', function loadingData() {
             },
             'fill-outline-color': '#BBBBBB',
             'fill-opacity': 0.7,
+            'fill-outline-color': '#BBBBBB',
+            'fill-opacity': 0.7,
         }
     });
 });
@@ -41,7 +43,7 @@ map.on('load', function loadingData() {
 map.getCanvas().style.cursor = 'default';
 
 const legend = document.getElementById('legend');
-legend.innerHTML = "<b>COVID Rates<br>(cases/population)</b><br><br>";
+legend.innerHTML = "<b>COVID Case Rate<br>(cases/population)</b><br><br>";
 
 layers.forEach((layer, i) => {
     const color = colors[i];

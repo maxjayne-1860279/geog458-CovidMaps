@@ -20,7 +20,7 @@ body {
     overflow: auto;
     border-radius: 3px;
   }
-
+  
 /* the layout of the legend panel */
 #legend {
     position: absolute;

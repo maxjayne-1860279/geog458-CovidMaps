@@ -53,7 +53,7 @@ map.addLayer({
 map.on('click', 'cases-layer', (event) => {
     new mapboxgl.Popup()
         .setLngLat(event.features[1].geometry.coordinates)
-        .setHTML(`<strong>Rates:</strong> ${event.features[1].properties.rates}`)
+        .setHTML(`<strong>Rates:</strong> ${event.features[1].properties.grades}`)
         .addTo(map);
 });
 

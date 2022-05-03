@@ -8,7 +8,7 @@ const map = new mapboxgl.Map({
     projection: 'albers' 
 });
 
-const layers = [
+const grades = [
     0,
     40,
     80,
@@ -20,7 +20,7 @@ const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,
 map.on('load', function loadingData() {
     map.addSource('rates', {
         type: 'geojson',
-        data: 'assets/us-covid-2020-rates.geojson'
+        data: 'assets/us-covid-2020-rates.json'
     });
     
     map.addLayer({
@@ -30,10 +30,8 @@ map.on('load', function loadingData() {
         'paint': {
             'fill-color': {
                 'property': 'rates',
-                'stops': [...layers.keys()].map(i => ([layers[i], colors[i]]))
+                'stops': [...grades.keys()].map(i => ([grades[i], colors[i]]))
             },
-            'fill-outline-color': '#BBBBBB',
-            'fill-opacity': 0.7,
             'fill-outline-color': '#BBBBBB',
             'fill-opacity': 0.7,
         }
@@ -45,7 +43,7 @@ map.getCanvas().style.cursor = 'default';
 const legend = document.getElementById('legend');
 legend.innerHTML = "<b>COVID Case Rate<br>(cases/population)</b><br><br>";
 
-layers.forEach((layer, i) => {
+grades.forEach((grade, i) => {
     const color = colors[i];
     const item = document.createElement('div');
     const key = document.createElement('span');
@@ -53,7 +51,7 @@ layers.forEach((layer, i) => {
     key.style.backgroundColor = color;
 
     const value = document.createElement('span');
-    value.innerHTML = `${layer} - ${layer[i+1] || 1000}`;
+    value.innerHTML = `${grade} - ${grades[i+1] || 1000}`;
     item.appendChild(key);
     item.appendChild(value);
     legend.appendChild(item);

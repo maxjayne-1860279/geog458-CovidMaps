@@ -8,7 +8,7 @@ let map = new mapboxgl.Map({
     projection: 'albers'
 });
 
-const grades = [100, 500, 1000, 5000, 50000],
+const grades = [100, 1000, 5000, 50000, 200000],
     colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,0,38)'];
     radii = [1, 5, 10, 20, 40];
 
@@ -53,7 +53,7 @@ map.addLayer({
 map.on('click', 'cases-layer', (event) => {
     new mapboxgl.Popup()
         .setLngLat(event.features[1].geometry.coordinates)
-        .setHTML(`<strong>Rates:</strong> ${event.features[1].properties.grades}`)
+        .setHTML(`<strong>Rates:</strong> ${event.features[1].properties.cases}`)
         .addTo(map);
 });
 

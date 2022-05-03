@@ -41,7 +41,7 @@ map.on('load', function loadingData() {
 map.getCanvas().style.cursor = 'default';
 
 const legend = document.getElementById('legend');
-legend.innerHTML = "<b>COVID Case Rate<br>(cases/population)</b><br><br>";
+legend.innerHTML = "<b>COVID Case Rate<br>(cases/1000 pop)</b><br><br>";
 
 grades.forEach((grade, i) => {
     const color = colors[i];

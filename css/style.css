@@ -21,13 +21,6 @@ body {
     border-radius: 3px;
   }
 
-  #features {
-    top: 0;
-    height: 100px;
-    margin-top: 20px;
-    width: 250px;
-  }
-
 /* the layout of the legend panel */
 #legend {
     position: absolute;
@@ -100,9 +93,4 @@ a {
     font-family: 'Open Sans', sans-serif;
     font-size: 15pt;
     color: white
-}
-
-.mapboxgl-canvas-container.mapboxgl-interactive,
-.mapboxgl-ctrl-group button.mapboxgl-ctrl-compass {
-    cursor: unset;
 }

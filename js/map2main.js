@@ -8,7 +8,7 @@ let map = new mapboxgl.Map({
     projection: 'albers'
 });
 
-const grades = [10, 50, 200, 500, 1000],
+const grades = [100, 500, 1000, 5000, 50000],
     colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,0,38)'];
     radii = [1, 5, 10, 20, 40];
 

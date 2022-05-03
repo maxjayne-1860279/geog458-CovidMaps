@@ -3,7 +3,7 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamFrb2J6aGFvIiwiYSI6ImNpcms2YWsyMzAwMmtmbG5ic
 const map = new mapboxgl.Map({
     container: 'map', // container ID
     style: 'mapbox://styles/mapbox/dark-v10',
-    zoom: 5, // starting zoom
+    zoom: 4, // starting zoom
     center: [-100, 40] // starting center
 });
 
@@ -31,7 +31,7 @@ map.addLayer({
         'circle-radius': {
             'property': 'cases',
             'stops': [...grades.keys()].map(i => ([{
-                zoom: 5,
+                zoom: 4,
                 value: grades[i]
             }, radii[i]]))
         },

@@ -15,11 +15,19 @@
 <body>
     <div id="map"></div>
     <div class='map-overlay' id="legend"></div>
+    <div class="topnav" id="myTopnav">
+        <a href="map2.html">Graduated Symbol Map</a>
+        <a class="active" href="map1.html"><b>Choropleth Map</b></a>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
     <div id="title">
-        United States Covid Rates
+        United States Covid Rates by County
     </div>
     <div id="subtitle">
-        2020 Rates from the <a href="https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv">NY-Times</a><br>
+        <b>2020 Covid data - <a href="https://github.com/nytimes/covid-19-data/blob/43d32dde2f87bd4dafbb7d23f5d9e878124018b8/live/us-counties.csv">NY-Times</a></b><br>
         <div id='text-description'>
             <p>Mouse over a County!</p>
         </div>

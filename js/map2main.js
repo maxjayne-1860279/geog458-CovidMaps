@@ -12,6 +12,20 @@ const grades = [100, 1000, 5000, 50000, 200000],
     colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,0,38)'];
     radii = [1, 5, 10, 20, 40];
 
+let icon = document.getElementsByClassName("icon")[0];
+
+icon.addEventListener('click', responsive_control);
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function responsive_control() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 //load data to the map as new layers.
 //map.on('load', function loadingData() {
 map.on('load', () => { //simplifying the function statement: arrow with brackets to define a function
@@ -54,7 +68,8 @@ map.getCanvas().style.cursor = 'default';
 map.on('click', 'cases-layer', (event) => {
     new mapboxgl.Popup()
         .setLngLat(event.features[1].geometry.coordinates)
-        .setHTML(`<strong>Cases:</strong> ${event.features[1].properties.cases}`)
+        .setHTML(`<strong>County:</strong> ${event.features[1].properties.county}<br>
+                <strong>Cases:</strong> ${event.features[1].properties.cases}`)
         .addTo(map);
 });
 

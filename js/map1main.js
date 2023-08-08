@@ -17,6 +17,20 @@ const grades = [
 ];
 const colors = ['rgb(255,255,178)','rgb(254,204,92)','rgb(253,141,60)','rgb(227,26,28)', 'rgb(177,0,38)'];
 
+let icon = document.getElementsByClassName("icon")[0];
+
+icon.addEventListener('click', responsive_control);
+
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function responsive_control() {
+  let x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
 map.on('load', function loadingData() {
     map.addSource('rates', {
         type: 'geojson',
